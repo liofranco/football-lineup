@@ -1,0 +1,156 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 400px;
+    gap: 20px;
+}
+
+.nav{
+    width: 100%;
+}
+
+.nav ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav ul li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16px;
+    list-style: none;
+    border-radius: 5px;
+    padding: 8px 0;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.active{
+    background-color: #222327;
+    color: #fff !important;
+}
+
+.edit_team_container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    color: #aaa;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 15px;
+}
+
+.form input{
+    background-color: #222327;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 7px 2px;
+    color: #fff;
+}
+
+.form input:focus{
+    border-color: #aaa;
+}
+
+.players_quantity_container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.players_quantity{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: #222327;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.quantity{
+    padding: 10px 12px;
+    border-radius: 5px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.quantity_select{
+    background-color: #2dcf99;
+    color: #fff;
+    padding: 10px 12px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.edit_design_container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+    color: #fff;
+    max-height: 540px;
+    width: 100%;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #222327 #aaa;
+    /* cursor: pointer; */
+}
+
+.edit_design_container::-webkit-scrollbar{
+    width: 10px;
+}
+
+.edit_design_container::-webkit-scrollbar-thumb{
+    background-color: #aaa;
+    border-radius: 10px;
+    max-height: 15px;
+}
+
+.edit_design_container h3{
+    font-size: 17px;
+}
+
+.option_container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 90%;
+    background-color: #222327;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.option_buttons_container{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.color_container{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #666;
+    border-radius: 5px;
+}

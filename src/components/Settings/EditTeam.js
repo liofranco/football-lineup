@@ -45,20 +45,20 @@ const EditTeam = () => {
             </form>
             <div className={style.players_quantity_container}>
                 <p>Jugadores</p>
-                <div className={style.players_quantity}>
-                    <div className={playerQuantity === 5 ? style.quantity_select : style.quantity} onClick={() => {
+                <div className='select-options-container'>
+                    <div className={playerQuantity === 5 ? 'option-selected' : 'option'} onClick={() => {
                         setPlayerQuantity(5)
                         setFormations(formations5)
                         setFormation(formations5.find(f => f.id === '202'))
                     }
                     }>5</div>
-                    <div className={playerQuantity === 7 ? style.quantity_select : style.quantity} onClick={() => {
+                    <div className={playerQuantity === 7 ? 'option-selected' : 'option'} onClick={() => {
                         setPlayerQuantity(7)
                         setFormations(formations7)
                         setFormation(formations7.find(f => f.id === '321'))
                     }
                     }>7</div>
-                    <div className={playerQuantity === 11 ? style.quantity_select : style.quantity} onClick={() => {
+                    <div className={playerQuantity === 11 ? 'option-selected' : 'option'} onClick={() => {
                         setPlayerQuantity(11)
                         setFormations(formations11)
                         setFormation(formations11.find(f => f.id === '442'))

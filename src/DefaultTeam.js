@@ -2,6 +2,7 @@ export const defaultTeam = [
     {
         name: '',
         note: '',
+        number: '',
         positionX: 175,
         positionY: 420,
         id: '1'
@@ -9,6 +10,7 @@ export const defaultTeam = [
     {
         name: '',
         note: '',
+        number: '',
         positionX: 40,
         positionY: 320,
         id: '2'
@@ -16,6 +18,7 @@ export const defaultTeam = [
     {
         name: '',
         note: '',
+        number: '',
         positionX: 130,
         positionY: 320,
         id: '3'
@@ -23,6 +26,7 @@ export const defaultTeam = [
     {
         name: '',
         note: '',
+        number: '',
         positionX: 220,
         positionY: 320,
         id: '4'
@@ -30,6 +34,7 @@ export const defaultTeam = [
     {
         name: '',
         note: '',
+        number: '',
         positionX: 310,
         positionY: 320,
         id: '5'
@@ -37,6 +42,7 @@ export const defaultTeam = [
     {
         name: '',
         note: '',
+        number: '',
         positionX: 40,
         positionY: 170,
         id: '6'
@@ -44,6 +50,7 @@ export const defaultTeam = [
     {
         name: '',
         note: '',
+        number: '',
         positionX: 130,
         positionY: 170,
         id: '7'
@@ -51,6 +58,7 @@ export const defaultTeam = [
     {
         name: '',
         note: '',
+        number: '',
         positionX: 220,
         positionY: 170,
         id: '8'
@@ -58,6 +66,7 @@ export const defaultTeam = [
     {
         name: '',
         note: '',
+        number: '',
         positionX: 310,
         positionY: 170,
         id: '9'
@@ -65,6 +74,7 @@ export const defaultTeam = [
     {
         name: '',
         note: '',
+        number: '',
         positionX: 100,
         positionY: 20,
         id: '10'
@@ -72,6 +82,7 @@ export const defaultTeam = [
     {
         name: '',
         note: '',
+        number: '',
         positionX: 250,
         positionY: 20,
         id: '11'

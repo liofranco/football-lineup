@@ -7,7 +7,8 @@ import style from './Field.module.css';
 const Field = () => {
 
     const { playerQuantity, formation, teamName, note, coachName, team, setTeam } = useContext(TeamContext)
-    const { primaryColor, secondaryColor, sleeveColor, collarColor, primaryColorGK, secondaryColorGK, design, fieldPerspective } = useContext(DesignContext)
+    const { primaryColor, secondaryColor, sleeveColor, collarColor, primaryColorGK, secondaryColorGK,
+        design, fieldPerspective, fieldColor, backgroundColor, textColor } = useContext(DesignContext)
 
     const [modalPlayer, setModalPlayer] = useState(false)
     const [playerSelected, setPlayerSelected] = useState({})
@@ -26,10 +27,17 @@ const Field = () => {
         })
     }
 
+    const handlePlayerNumber = e => {
+        setPlayerSelected({
+            ...playerSelected,
+            number: e.target.value
+        })
+    }
+
     const handlePlayer = playerId => {
         setTeam(team.map(player => {
             if (playerId.id === player.id) {
-                return { ...player, name: playerSelected.name, note: playerSelected.note }
+                return { ...player, name: playerSelected.name, note: playerSelected.note, number: playerSelected.number }
             } else {
                 return player;
             }
@@ -41,7 +49,7 @@ const Field = () => {
         setModalPlayer(false)
     }
 
-    const saveTeam = () => {
+    /* const saveTeam = () => {
         console.log([{
             name: teamName,
             note: note,
@@ -59,13 +67,14 @@ const Field = () => {
             },
             players: team
         }])
-    }
+    } */
 
     return (
-        <div className={style.container}>
+        <div className={style.container} style={{backgroundColor: backgroundColor, color: textColor}}>
             <div className={style.header}>
                 <h2>{teamName}</h2>
                 <p>{note}</p>
+                <p>{coachName.length > 0 && `DT: ${coachName}`}</p>
             </div>
             <div className='grid' id='grid'>
                 {/* <p className='futxi'>FutXI.com</p> */}
@@ -74,7 +83,7 @@ const Field = () => {
                         <div className='field-container'>
                             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                                 viewBox="0 0 400 420">
-                                <polygon points="606.87,420 -202.74,420 24.78,2.57 374.06,2.57 " fill='#1aaf7d' />
+                                <polygon points="606.87,420 -202.74,420 24.78,2.57 374.06,2.57 " fill={fieldColor} />
                             </svg>
                         </div>
                         <img src='/campo3d_lineas.png' alt='Field' className='field_lines3d' />
@@ -84,7 +93,7 @@ const Field = () => {
                         <div className='field-container'>
                             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                                 viewBox="0 0 400 420">
-                                <rect x="0" width="400" height="420" fill='#1aaf7d' />
+                                <rect x="0" width="400" height="420" fill={fieldColor} />
                             </svg>
                         </div>
                         <img src='/campo2d_lineas.png' alt='Field' className='field_lines2d' />
@@ -133,7 +142,7 @@ const Field = () => {
                             <label htmlFor='player-note'>Nota</label>
                             <input onChange={handlePlayerNote} type='text' id='player-note' name='player-note' value={playerSelected.note} />
                             <label htmlFor='player-number'>Numero</label>
-                            <input type='number' id='player-number' name='player-number' />
+                            <input onChange={handlePlayerNumber} type='number' id='player-number' name='player-number' value={playerSelected.number}/>
                         </form>
                         <div className='buttons'>
                             <button onClick={() => handlePlayer(playerSelected)}>Guardar</button>
@@ -142,11 +151,10 @@ const Field = () => {
                     </div>
                 )}
             </div>
-            <div className={style.footer}>
+            {/* <div className={style.footer}>
                 <p>{coachName.length > 0 && `DT: ${coachName}`}</p>
-                <p className='futxi'>FutXI.com</p>
-            </div>
-            <button onClick={saveTeam}>Guardar equipo</button>
+            </div> */}
+            {/* <button onClick={saveTeam}>Guardar equipo</button> */}
         </div>
     );
 };

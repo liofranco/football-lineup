@@ -16,16 +16,17 @@
     flex-direction: column;
     width: 90%;
     align-items: center;
-    min-height: 50px;
+    min-height: 80px;
     margin-bottom: 15px;
+    gap: 3px;
 }
 
 .header h2{
-    font-size: 20px;
+    font-size: 23px;
 }
 
 .header p{
-    font-size: 15px
+    font-size: 16px
 }
 
 .footer{

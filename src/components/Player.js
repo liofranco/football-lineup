@@ -31,8 +31,6 @@ const Player = ({ player, setModalPlayer, setPlayerSelected, primaryColor, secon
             onClick: function () {
                 setModalPlayer(true)
                 setPlayerSelected(player)
-                console.log(player)
-
             }
         })
         // eslint-disable-next-line
@@ -74,10 +72,15 @@ const Player = ({ player, setModalPlayer, setPlayerSelected, primaryColor, secon
                         <path fillRule="evenodd" clipRule="evenodd" d="M247 0H207V40H247V0ZM377 143.218L423.274 155.617L453.753 41.8668L377 21.3008V143.218ZM0.575241 41.8524L77 21.3744V143.307L31.0583 155.617L0.575241 41.8524Z" fill={sleeveColor} />
                     </svg>
                 </div>
-                <div style={{ position: 'absolute', width: '30px', height: '45px', display: 'flex', alignItems: 'center', justifyContent: 'center' }} >
+                <div style={{ position: 'absolute', width: '30px', height: '45px', display: 'flex', justifyContent: 'center' }} >
                     <Designs design={design} color={secondaryColor} />
                 </div>
             </div>
+            {player.number.length > 0 && (
+                <div className="player-number-container">
+                    <p>{player.number}</p>
+                </div>
+            )}
             {/* <img src='/river.png' width={45} height={45} alt='Team shirt'/> */}
             <p className='player-name'>{player.name}</p>
             <p className='player-note'>{player.note}</p>

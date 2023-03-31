@@ -13,7 +13,7 @@ function App() {
 
   const downloadScreenshot = () => {
     html2canvas(ref.current, {
-      scale: 3, width: 400, height: 562
+      scale: 3, width: 400, height: 536
     }).then(function (canvas) {
       const image = canvas.toDataURL('image/jpeg');
       let link = document.createElement('a');
@@ -31,7 +31,7 @@ function App() {
     // `element` is the HTML element you want to share.
     // `backgroundColor` is the desired background color.
     const canvas = await html2canvas(ref.current, {
-      scale: 3, width: 400, height: 562
+      scale: 3, width: 400, height: 536
     });
     canvas.toBlob(async (blob) => {
       // Even if you want to share just one file you need to 
@@ -65,8 +65,8 @@ function App() {
             <div ref={ref} style={{ maxWidth: '400px' }}>
               <Field />
             </div>
-            <button style={{padding: '10px'}} onClick={downloadScreenshot}>Download screenshot</button>
-            <button style={{padding: '10px'}} onClick={share}>Compartir</button>
+            <button style={{padding: '10px', marginTop: '30px'}} onClick={downloadScreenshot}>Descargar imagen</button>
+            <button style={{padding: '10px', marginTop: '30px'}} onClick={share}>Compartir</button>
           </div>
         </DesignProvider>
       </TeamProvider>

@@ -23,7 +23,7 @@ main {
 }
 
 .main-container {
-  width: 100%;
+  width: 90%;
   max-width: 840px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -448,5 +448,6 @@ select {
     padding: 20px 0;
     align-items: center;
     gap: 30px;
+    width: 100%;
   }
 }

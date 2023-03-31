@@ -38,7 +38,7 @@ function App() {
       // send them as an array of files.
       const files = [new File([blob], 'image.png', { type: blob.type })];
       const shareData = {
-        text: '#FutXI',
+        text: '',
         title: 'Mi equipo',
         files,
       };
